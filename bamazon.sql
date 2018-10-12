@@ -32,3 +32,9 @@ values ("Human flesh","grocery",50, 10);
 
 insert into products (product_name,department_name,price,stock_quantity) 
 values ("Human organs","grocery",50, 10);
+
+insert into products (product_name,department_name,price,stock_quantity) 
+values ("simon's life","grocery",999999, 1);
+
+insert into products (product_name,department_name,price,stock_quantity) 
+values ("Nathaniel's life","grocery",1, 1);
