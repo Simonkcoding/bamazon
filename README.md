@@ -9,7 +9,7 @@ The program uses Inquirer as interaction with user:
 
 2. Preparation
 
-To run the program, the user need to set up a MySQL server using ![MAMP](https://www.mamp.info/en/) and ![MySQL](https://www.mysql.com/). The configuration of server should match with the connection information in the js files.
+To run the program, the user need to set up a MySQL server using [MAMP](https://www.mamp.info/en/) and [MySQL](https://www.mysql.com/). The configuration of server should match with the connection information in the js files.
 
 2. bamazonCustomer
 
@@ -27,8 +27,13 @@ Type "node bamazonManager.js" . There are 4 selections which allow user to :
 
 * View Products for Sale, just like customer.  
 * View Low Inventory
+
 ![alt text](/img/lowInv.png)
+
 * Add to Inventory
+
 ![alt text](/img/addInv.png)
+
 * Add New Product
+
 ![alt text](/img/addprod.png)
