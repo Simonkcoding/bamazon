@@ -143,7 +143,7 @@ function addToInv(){
                     item_id: res.itemToRefill
                 }]
                 , function (err, result) {
-                    console.log("Item: "+resu[0].item_id+", "+resu[0].product_name+" has been restocked!")
+                    console.log("Item: "+resu[0].item_id+", git"+resu[0].product_name+" has been restocked!")
                 })
         })
     })
