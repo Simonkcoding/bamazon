@@ -1,6 +1,6 @@
 # bamazon
 
-1. introuction
+1. introduction
 
 This is an exercise merge node.js to MySQL server.
 The program uses Inquirer as interaction with user:
