@@ -124,7 +124,7 @@ function addToInv(){
         .prompt([
             {
                 name: "itemToRefill",
-                message: "What is the name of the item?"
+                message: "What is the # of the item?"
 
             }, {
                 name: "numOfItem",
@@ -132,16 +132,19 @@ function addToInv(){
 
             }
         ]).then(function (res) {
-            console.log("You are about to add: " + res.numOfItem + " " + res.itemToAdd + " .Please wait...");
-            var query = connection.query("update products set ? where ?",
+            console.log("You are about to add: " + res.numOfItem + " of Item # " + res.itemToRefill + ".Please wait...");
+            
+            var query = connection.query("Select * from products where item_id =?", [res.itemToRefill], function (err, resu) {
+            
+                var query = connection.query("update products set ? where ?",
                 [{
-                    stock_quantity: res.numOfItem //wrong!
+                    stock_quantity: resu[0].stock_quantity+ parseInt(res.numOfItem)
                 },{
-                    product_name: res.itemToRefill
+                    item_id: res.itemToRefill
                 }]
                 , function (err, result) {
-                    console.log(result.affectedRows + " rows has been added!")
-                    console.log("Item: "+res.itemToRefill+" has been restocked!")
+                    console.log("Item: "+resu[0].item_id+", "+resu[0].product_name+" has been restocked!")
                 })
         })
+    })
 };
