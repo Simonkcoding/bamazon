@@ -73,7 +73,8 @@ function shoppingCart() {
                         }, {
                             item_id: res.askItemId
                         }], function () {
-                            console.log(divider + "Your order of " + res.askQuantity + " " + result[0].product_name + " has been placed!" + divider)
+                            console.log(divider + "Your order of " + res.askQuantity + " " + result[0].product_name + " has been placed!");
+                            console.log("Your total is :" + res.askQuantity * result[0].price + " USD!" + divider);
                             decision();
                         })
                 } else {

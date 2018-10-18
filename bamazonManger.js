@@ -31,20 +31,20 @@ function managerMenu() {
             console.log("You selected:" + res.action);
             switch (res.action) {
                 case "View Products for Sale":
-                    displayItems();
-                    break;
+                    return displayItems();
+                
 
                 case "View Low Inventory":
-                    viewLowInv();
-                    break;
+                    return viewLowInv();
+                  
 
                 case "Add to Inventory":
-                    addToInv();
-                    break;
+                    return addToInv();
+                    
 
                 case "Add New Product":
-                    addNewProd();
-                    break;
+                   return addNewProd();
+                    
             }
         })
 }
